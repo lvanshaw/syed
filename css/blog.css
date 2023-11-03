@@ -1,0 +1,74 @@
+/* Add these styles to your existing style.css or create a new one */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .horizontal-card {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .horizontal-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .horizontal-card img {
+    max-width: 150px;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .card-details {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .card-details h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .card-details p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .card-content {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .card-content img {
+    max-width: 100%;
+  }
+  
+  .card-content h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .card-content p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  /* Add more styling as needed */
+  

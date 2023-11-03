@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog - Your Website</title>
+    <link rel="stylesheet" href="./css/blog.css" />
+  </head>
+  <body>
+    <h1>Blog</h1>
+
+    <!-- Horizontal Card-like structures -->
+    <div
+      class="horizontal-card"
+      onclick="window.location.href='./pages/blog/card1.html'"
+    >
+      <img src="./img/blog/card1/unity.jpg" alt="Card 1" />
+      <div class="card-details">
+        <h2>Unity Script LifeCycle</h2>
+        <p>Card 1 Description</p>
+      </div>
+    </div>
+
+    <div class="horizontal-card" onclick="openCard('card2')">
+      <img src="card2_thumbnail.jpg" alt="Card 2" />
+      <div class="card-details">
+        <h2>Card 2 Title</h2>
+        <p>Card 2 Description</p>
+      </div>
+    </div>
+
+    <!-- Content for each card -->
+    <div class="card-content" id="card1">
+      <h2>Card 1 Title</h2>
+      <img src="card1_image.jpg" alt="Card 1" />
+      <p>Card 1 Full Content</p>
+    </div>
+
+    <div class="card-content" id="card2">
+      <h2>Card 2 Title</h2>
+      <img src="card2_image.jpg" alt="Card 2" />
+      <p>Card 2 Full Content</p>
+    </div>
+
+    <!-- Add more horizontal cards and corresponding content as needed -->
+
+    <script>
+      function openCard(cardId) {
+        const cardContent = document.getElementById(cardId);
+        cardContent.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

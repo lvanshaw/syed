@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Portfolio Website</title>
+    <!----CSS link----->
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <nav>
+        <img src="../../logo.png" class="logo" />
+        
+        <!-- Dark Mode Toggle Button 
+        <button id="dark-mode-toggle" class="dark-mode-toggle">Dark Mode</button>
+        -->
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#" class="btn">Resume</a>
+      </nav>
+
+      <main>
+      <h1>Understanding Unity Script Lifecycle</h1>
+      <img src="../../img/blog/card1/lifecycle.png" />
+      <h2>OnEnable()</h2>
+      <p>
+        <em>OnEnable()</em> is called after the <em>Awake</em> method is executed
+        immediately. It's also called whenever the script gets enabled.
+      </p>
+      <br><br>
+      <h2>OnApplicationPause(bool)</h2>
+      <p>
+        <em>OnApplicationPause(bool)</em> is called after <em>OnEnable</em> if
+        the script is enabled, and it's called after <em>Awake</em> if the script
+        is not enabled. It returns <em>False</em> whenever a game application
+        comes to the foreground, indicating it's currently running. It returns
+        <em>True</em> whenever a game application goes to the background or
+        switches to another page.
+      </p>
+      <br><br>
+      
+      <h2>OnApplicationFocus(bool)</h2>
+      <p>
+        <em>OnApplicationFocus(bool)</em> is called immediately after
+        <em>OnApplicationPause</em>. It's also called whenever the game
+        application gains or loses focus. It returns <em>True</em> when the
+        application comes to the foreground and is currently in focus. It returns
+        <em>False</em> when the application goes to the background or loses focus.
+      </p>
+      <br><br>
+      
+      <h2>Start()</h2>
+      <p>
+        <em>Start()</em> is called after <em>Awake</em>, <em>OnEnable</em>,
+        <em>OnApplicationPause</em>, and <em>OnApplicationFocus</em> It's called
+        only once in a script's lifecycle, and it's executed if the script is
+        enabled.
+      </p>
+      <br><br>
+      
+      <h2>FixedUpdate()</h2>
+      <p>
+        <em>FixedUpdate()</em> is called after the first frame of the scene is
+        created. It's part of the update and render cycle and is used to
+        determine the object's next state in subsequent frames. It's called after
+        every predefined fixed time interval. The fixed time step can be
+        configured in Edit -> Project Settings -> Time -> Fixed Time Step.
+      </p>
+      <br><br>
+      
+      <h2>Update()</h2>
+      <p>
+        <em>Update()</em> is called once per frame continuously, according to
+        the frames per second (FPS) rate of the game.
+      </p>
+      <br><br>
+      
+      <h2>LateUpdate()</h2>
+      <p>
+        <em>LateUpdate()</em> is called once after every <em>Update</em> method
+        call.
+      </p>
+      <br><br>
+      
+      <h2>OnGUI()</h2>
+      <p>
+        <em>OnGUI()</em> is called many times per frame and is best for drawing
+        GUI elements and handling GUI events. It's used for drawing UI buttons and
+        handling click events.
+      </p>
+      <br><br>
+      
+      <h2>OnApplicationQuit()</h2>
+      <p>
+        <em>OnApplicationQuit()</em> is called when the user quits the game
+        application. It's also called when the user stops play mode in the Unity
+        editor. Note that when the user quits the game, it first loses focus and
+        then quits the game. This method is best for saving or persisting any game
+        data.
+      </p>
+      <br><br>
+      
+      <h2>OnDisable()</h2>
+      <p>
+        <em>OnDisable()</em> is called whenever the script gets disabled. You can
+        use <em>System.GC.Collect()</em> to free up unused memory locations.
+      </p>
+      <br><br>
+      
+      <h2>OnDestroy()</h2>
+      <p>
+        <em>OnDestroy()</em> is called when the object is about to be destroyed.
+        It's called when the current scene ends or is unloaded, after the game
+        application quits, and when the user stops play mode in Unity Editor.
+      </p>
+    </main>
+    </div>
+  </body>
+</html>
+
+
+
+
